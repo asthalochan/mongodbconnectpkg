@@ -8,7 +8,7 @@ list_of_files = [
    ".github/workflows/python-publish.yaml",
    "src/__init__.py",
    f"src/{package_name}/__init__.py", 
-   f"src/{package_name}/mongo_crud.py", 
+   f"src/{package_name}/mongo_main.py", 
    "tests/__init__.py",
    "tests/unit/__init__.py",
    "tests/unit/test_unit.py",
