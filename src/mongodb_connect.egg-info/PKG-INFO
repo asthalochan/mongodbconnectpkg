@@ -1,5 +1,5 @@
 Metadata-Version: 2.1
-Name: mongo-bridge
+Name: mongodbbridge
 Version: 0.0.7
 Summary: A python package for connecting with database.
 Home-page: https://github.com/asthalochan/mongodbconnectpkg

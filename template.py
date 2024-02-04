@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-package_name = "mongo-bridge"
+package_name = "mongodbbridge"
 
 list_of_files = [
    ".github/workflows/ci.yaml",
