@@ -43,7 +43,7 @@ class MongoOperation:
         if not isinstance(record, dict):
             raise TypeError("Record must be a dictionary")
         
-        collection = self.create_collection(collection_name)
+        collection = self.create_collection()
         collection.insert_one(record)
     
     def bulk_insert(self, datafile, collection_name: str = None) -> None:
@@ -55,18 +55,18 @@ class MongoOperation:
             raise ValueError("Unsupported file format")
             
         datajson = json.loads(dataframe.to_json(orient='records'))
-        collection = self.create_collection(collection_name)
+        collection = self.create_collection()
         collection.insert_many(datajson)
 
     def query_data(self, query: dict, collection_name: str) -> list:
-        collection = self.create_collection(collection_name)
+        collection = self.create_collection()
         result = list(collection.find(query))
         return result
     
     def update_record(self, filter_query: dict, update_data: dict, collection_name: str) -> None:
-        collection = self.create_collection(collection_name)
+        collection = self.create_collection()
         collection.update_one(filter_query, {"$set": update_data})
     
     def delete_record(self, query: dict, collection_name: str) -> None:
-        collection = self.create_collection(collection_name)
+        collection = self.create_collection()
         collection.delete_many(query)
