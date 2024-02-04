@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 
-package_name = "mongodb-connection-asthalochan"
+package_name = "mongo-bridge"
 
 list_of_files = [
    ".github/workflows/ci.yaml",
